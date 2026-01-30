@@ -68,7 +68,6 @@ menu = st.sidebar.radio(
     [
         "Academic Profile",
         "Experience",
-        "Research and Methods",
         "Qualifications",
         "Contact"
     ]
@@ -228,89 +227,6 @@ elif menu == "Experience":
             <li>Answered student queries related to course content and assessments</li>
             <li>Assisted with invigilation and administrative academic duties</li>
         </ul>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
-
-# =================================================
-# Research and Methods
-# =================================================
-elif menu == "Research and Methods":
-    st.title("Research and Methods")
-
-    st.markdown(
-        """
-        <div class="cv-card">
-        <h3 class="section-title">Research Interests</h3>
-
-        <ul>
-            <li>Applied data science in STEM education</li>
-            <li>Statistical modelling and inference</li>
-            <li>Time-series analysis</li>
-            <li>Machine learning applications in academic research</li>
-        </ul>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
-
-    st.markdown(
-        """
-        <div class="cv-card">
-        <h3 class="section-title">Methodological Expertise</h3>
-
-        <ul>
-            <li>Exploratory data analysis and visualisation</li>
-            <li>Regression and multivariate analysis</li>
-            <li>Model validation and interpretation</li>
-            <li>Reproducible research workflows</li>
-        </ul>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
-
-elif menu == "Qualifications":
-    st.title("Qualifications")
-
-    st.markdown(
-        """
-        <div class="cv-card">
-        <h3 class="section-title">Master of Commerce (MCom)</h3>
-        <p class="small-text">
-        Business and Financial Analytics<br>
-        University of the Free State<br>
-        January 2025 – December 2025
-        </p>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
-
-    st.markdown(
-        """
-        <div class="cv-card">
-        <h3 class="section-title">Bachelor of Commerce Honours (BCom Hons)</h3>
-        <p class="small-text">
-        Business and Financial Analytics<br>
-        University of the Free State<br>
-        January 2024 – December 2024
-        </p>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
-
-    st.markdown(
-        """
-        <div class="cv-card">
-        <h3 class="section-title">Bachelor of Commerce (BCom)</h3>
-        <p class="small-text">
-        Business and Financial Analytics<br>
-        University of the Free State<br>
-        2021 – 2023
-        </p>
         </div>
         """,
         unsafe_allow_html=True
