@@ -107,7 +107,7 @@ if menu == "Academic Profile":
 
         st.markdown(
             """
-            **Profile Summary**<br>
+            **Profile Summary**
             My passion lies in leveraging data to solve complex financial and 
             business challenges. My experiences encompass data analytics, 
             dashboard creation, data preprocessing, and developing machine learning models. 
