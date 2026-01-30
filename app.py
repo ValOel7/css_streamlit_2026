@@ -88,7 +88,7 @@ if menu == "Academic Profile":
 
     with col1:
         st.image(
-            "https://cdn.pixabay.com/photo/2017/08/30/07/52/portrait-2695584_640.jpg",
+            "https://media.licdn.com/dms/image/v2/D4D03AQEep1ngJFGRvw/profile-displayphoto-scale_400_400/B4DZvu5VAOGUAg-/0/1769239565802?e=1771459200&v=beta&t=LseAPd591Le3-pb-BhzUUnn5oUvsFkWG_LQZ-UuFXD8",
             width=170
         )
 
