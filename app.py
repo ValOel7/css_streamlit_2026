@@ -96,11 +96,11 @@ if menu == "Academic Profile":
         st.markdown(
             """
             <div class="cv-card">
-                <h3>Dr Jane Doe</h3>
+                <h3> Valusha Oelofse</h3>
                 <p class="small-text">
-                Junior Lecturer and Data Scientist<br>
-                Department of Astrophysics<br>
-                University of Science
+                Junior Lecturer and Aspiring Data Scientist<br>
+                Department of Economics and Finance<br>
+                University of the Free Sate
                 </p>
             </div>
             """,
@@ -111,10 +111,11 @@ if menu == "Academic Profile":
             """
             **Profile Summary**
 
-            Junior lecturer and data scientist with experience in quantitative
-            research methods, statistical analysis, and applied data science
-            within academic and teaching contexts. Strong focus on reproducible
-            research, data literacy, and evidence-based decision making.
+            My passion lies in leveraging data to solve complex financial and 
+            business challenges. My experiences encompass data analytics, 
+            dashboard creation, data preprocessing, and developing machine learning classification models. 
+            My research focus on designing a Social Stress 
+            Indicator which has further sharpened my analytical and problem-solving expertise.
             """
         )
 
