@@ -235,22 +235,6 @@ elif menu == "Contact":
         """
         <div class="cv-card">
         <p>
-        <strong>Email:</strong> valusha.oel@gmail.com<br>
-        <strong>Institution:</strong> University of the Free State<br>
-        </p>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
-
-
-elif menu == "Contact":
-    st.title("Contact")
-
-    st.markdown(
-        """
-        <div class="cv-card">
-        <p>
         <strong>Email:</strong> your.email@ufs.ac.za<br>
         <strong>Institution:</strong> University of the Free State<br>
         <strong>Office Hours:</strong> By appointment
