@@ -44,7 +44,7 @@ st.markdown(
     }
     .linkedin-button {
         background-color: #4b2e83;
-        color: white;
+        color: white !important;
         padding: 0.45rem 0.9rem;
         text-decoration: none;
         border-radius: 4px;
@@ -52,7 +52,7 @@ st.markdown(
     }
     .linkedin-button:hover {
         background-color: #3b2366;
-        color: white;
+        color: white !important;
     }
     </style>
     """,
@@ -94,11 +94,11 @@ if menu == "Academic Profile":
         st.markdown(
             """
             <div class="cv-card">
-                <h3> Valusha Oelofse</h3>
+                <h3>Valusha Oelofse</h3>
                 <p class="small-text">
                 Junior Lecturer and Aspiring Data Scientist<br>
                 Department of Economics and Finance<br>
-                University of the Free Sate
+                University of the Free State
                 </p>
             </div>
             """,
@@ -107,17 +107,18 @@ if menu == "Academic Profile":
 
         st.markdown(
             """
-            **Profile Summary**
-
+            **Profile Summary**<br>
             My passion lies in leveraging data to solve complex financial and 
             business challenges. My experiences encompass data analytics, 
-            dashboard creation, data preprocessing, and developing machine learning classification models. 
-            My research focus on designing a Social Stress 
-            Indicator which has further sharpened my analytical and problem-solving expertise.
+            dashboard creation, data preprocessing, and developing machine learning models. 
+            My research focuses on designing a Social Stress 
+            Indicator which has sharpened my analytical and problem-solving expertise.
             """
         )
 
-
+# =================================================
+# Experience
+# =================================================
 elif menu == "Experience":
     st.title("Experience")
 
@@ -224,6 +225,9 @@ elif menu == "Experience":
         unsafe_allow_html=True
     )
 
+# =================================================
+# Qualifications
+# =================================================
 elif menu == "Qualifications":
     st.title("Qualifications")
 
@@ -268,7 +272,7 @@ elif menu == "Qualifications":
         """,
         unsafe_allow_html=True
     )
-==============================================
+
 # =================================================
 # Contact
 # =================================================
@@ -281,13 +285,11 @@ elif menu == "Contact":
             <p>
                 <strong>Email:</strong> your.email@ufs.ac.za<br>
                 <strong>Institution:</strong> University of the Free State<br>
-                <strong>LinkedIn:</strong>
-                <a href="https://www.linkedin.com/in/valentinaoelofse/" target="_blank">
-                    https://www.linkedin.com/in/valentinaoelofse/
-                </a>
             </p>
+            <a class="linkedin-button" href="https://www.linkedin.com/in/valentinaoelofse/" target="_blank">
+                View LinkedIn Profile
+            </a>
         </div>
         """,
         unsafe_allow_html=True
     )
-
