@@ -60,9 +60,9 @@ st.markdown(
 )
 
 # -------------------------------------------------
-# Sidebar navigation
+# Sidebar Profile Navigation
 # -------------------------------------------------
-st.sidebar.title("Navigation")
+st.sidebar.title("Profile Navigation")
 menu = st.sidebar.radio(
     "Select section",
     [
