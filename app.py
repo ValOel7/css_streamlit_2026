@@ -224,10 +224,51 @@ elif menu == "Experience":
         unsafe_allow_html=True
     )
 
+elif menu == "Qualifications":
+    st.title("Qualifications")
 
-# =================================================
-# Contact
-# =================================================
+    st.markdown(
+        """
+        <div class="cv-card">
+        <h3 class="section-title">Master of Commerce (MCom)</h3>
+        <p class="small-text">
+        Business and Financial Analytics<br>
+        University of the Free State<br>
+        January 2025 – December 2025
+        </p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+    st.markdown(
+        """
+        <div class="cv-card">
+        <h3 class="section-title">Bachelor of Commerce Honours (BCom Hons)</h3>
+        <p class="small-text">
+        Business and Financial Analytics<br>
+        University of the Free State<br>
+        January 2024 – December 2024
+        </p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+    st.markdown(
+        """
+        <div class="cv-card">
+        <h3 class="section-title">Bachelor of Commerce (BCom)</h3>
+        <p class="small-text">
+        Business and Financial Analytics<br>
+        University of the Free State<br>
+        2021 – 2023
+        </p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+==============================================
 # =================================================
 # Contact
 # =================================================
