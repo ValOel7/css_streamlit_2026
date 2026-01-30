@@ -238,6 +238,4 @@ elif menu == "Contact":
         <strong>Email:</strong> your.email@ufs.ac.za<br>
         <strong>Institution:</strong> University of the Free State<br>
         <strong>LinkedIn Link:</strong> https://www.linkedin.com/in/valentinaoelofse/
-        </p>
-    )
-
+        </p>""")
