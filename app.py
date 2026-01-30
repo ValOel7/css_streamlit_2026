@@ -67,7 +67,7 @@ menu = st.sidebar.radio(
     "Select section",
     [
         "Academic Profile",
-        "Teaching Experience",
+        "Experience",
         "Research and Methods",
         "Qualifications",
         "Skills and Tools",
@@ -128,25 +128,24 @@ if menu == "Academic Profile":
             unsafe_allow_html=True
         )
 
-# =================================================
-# Teaching Experience
-# =================================================
-elif menu == "Teaching Experience":
-    st.title("Teaching Experience")
+elif menu == "Experience":
+    st.title("Experience")
 
     st.markdown(
         """
         <div class="cv-card">
         <h3 class="section-title">Junior Lecturer</h3>
         <p class="small-text">
-        University of Science | 2021 – Present
+        University of the Free State · Contract<br>
+        February 2025 – Present<br>
+        Bloemfontein, Free State, South Africa (On-site)
         </p>
 
         <ul>
-            <li>Lecturing and tutoring undergraduate modules in research methods and data analysis</li>
-            <li>Designing and delivering practical sessions focused on applied statistics</li>
-            <li>Assessment design, marking, and academic moderation</li>
-            <li>Supervision of undergraduate research projects</li>
+            <li>Lecturing and supporting undergraduate modules in quantitative and data-oriented subjects</li>
+            <li>Designing and delivering tutorials and practical sessions</li>
+            <li>Assessment, marking, and academic moderation</li>
+            <li>Supporting student development in data analysis and problem-solving skills</li>
         </ul>
         </div>
         """,
@@ -156,15 +155,79 @@ elif menu == "Teaching Experience":
     st.markdown(
         """
         <div class="cv-card">
-        <h3 class="section-title">Ad Hoc Teaching Assistant</h3>
+        <h3 class="section-title">Data Analyst</h3>
         <p class="small-text">
-        University of Science | 2018 – 2020
+        Interdisciplinary Centre for Digital Futures (ICDF), University of the Free State · Contract<br>
+        July 2023 – December 2024<br>
+        Bloemfontein, Free State, South Africa (On-site)
         </p>
 
         <ul>
-            <li>Assisted with tutorials and practical sessions</li>
-            <li>Provided academic support and consultation to students</li>
-            <li>Assisted with grading and feedback</li>
+            <li>Conducted data analysis in support of interdisciplinary research initiatives</li>
+            <li>Performed data cleaning, exploratory analysis, and modelling</li>
+            <li>Produced analytical outputs and visualisations for research and reporting purposes</li>
+            <li>Collaborated with academic and research stakeholders across disciplines</li>
+        </ul>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+    st.markdown(
+        """
+        <div class="cv-card">
+        <h3 class="section-title">Intern</h3>
+        <p class="small-text">
+        Quantify Your Future · Virtual Internship (Powered by SAGEA)<br>
+        January 2023 – February 2023<br>
+        Remote
+        </p>
+
+        <ul>
+            <li>Participated in industry-aligned data analytics projects with FirstRand, Absa, and Nedbank</li>
+            <li>Gained practical exposure to data framing, exploration, modelling, and visualisation</li>
+            <li>Developed core professional skills including critical thinking, collaboration, and communication</li>
+            <li>Completed team-based projects facilitated by financial industry partners</li>
+        </ul>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+    st.markdown(
+        """
+        <div class="cv-card">
+        <h3 class="section-title">Demonstrator</h3>
+        <p class="small-text">
+        University of the Free State · Contract<br>
+        September 2022 – November 2022<br>
+        Bloemfontein, South Africa
+        </p>
+
+        <ul>
+            <li>Assisted students during practical sessions for module CSIS1644</li>
+            <li>Provided academic support and clarification of module content</li>
+            <li>Invigilated tests and supported assessment processes</li>
+        </ul>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+    st.markdown(
+        """
+        <div class="cv-card">
+        <h3 class="section-title">Demonstrator</h3>
+        <p class="small-text">
+        University of the Free State · Contract<br>
+        February 2022 – July 2022<br>
+        Bloemfontein, Free State, South Africa
+        </p>
+
+        <ul>
+            <li>Supported practical sessions for module CSIS1614</li>
+            <li>Answered student queries related to course content and assessments</li>
+            <li>Assisted with invigilation and administrative academic duties</li>
         </ul>
         </div>
         """,
