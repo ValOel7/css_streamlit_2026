@@ -243,20 +243,7 @@ elif menu == "Contact":
         unsafe_allow_html=True
     )
 
-.linkedin-button {
-    background-color: #4b2e83;
-    color: #ffffff !important;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: 500;
-    display: inline-block;
-}
 
-.linkedin-button:hover {
-    background-color: #3b2366;
-    color: #ffffff !important;
-}
 elif menu == "Contact":
     st.title("Contact")
 
