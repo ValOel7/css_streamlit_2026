@@ -117,14 +117,6 @@ if menu == "Academic Profile":
             """
         )
 
-        st.markdown(
-            """
-            <a class="linkedin-button" href="https://www.linkedin.com/in/valentinaoelofse/" target="_blank">
-            View LinkedIn Profile
-            </a>
-            """,
-            unsafe_allow_html=True
-        )
 
 elif menu == "Experience":
     st.title("Experience")
@@ -250,3 +242,40 @@ elif menu == "Contact":
         """,
         unsafe_allow_html=True
     )
+
+.linkedin-button {
+    background-color: #4b2e83;
+    color: #ffffff !important;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.linkedin-button:hover {
+    background-color: #3b2366;
+    color: #ffffff !important;
+}
+elif menu == "Contact":
+    st.title("Contact")
+
+    st.markdown(
+        """
+        <div class="cv-card">
+        <p>
+        <strong>Email:</strong> your.email@ufs.ac.za<br>
+        <strong>Institution:</strong> University of the Free State<br>
+        <strong>Office Hours:</strong> By appointment
+        </p>
+
+        <a class="linkedin-button" 
+           href="https://www.linkedin.com/in/your-linkedin-username" 
+           target="_blank">
+           View LinkedIn Profile
+        </a>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
