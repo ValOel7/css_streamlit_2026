@@ -228,14 +228,25 @@ elif menu == "Experience":
 # =================================================
 # Contact
 # =================================================
+# =================================================
+# Contact
+# =================================================
 elif menu == "Contact":
     st.title("Contact")
 
     st.markdown(
         """
         <div class="cv-card">
-        <p>
-        <strong>Email:</strong> your.email@ufs.ac.za<br>
-        <strong>Institution:</strong> University of the Free State<br>
-        <strong>LinkedIn Link:</strong> https://www.linkedin.com/in/valentinaoelofse/
-        </p>""")
+            <p>
+                <strong>Email:</strong> your.email@ufs.ac.za<br>
+                <strong>Institution:</strong> University of the Free State<br>
+                <strong>LinkedIn:</strong>
+                <a href="https://www.linkedin.com/in/valentinaoelofse/" target="_blank">
+                    https://www.linkedin.com/in/valentinaoelofse/
+                </a>
+            </p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
