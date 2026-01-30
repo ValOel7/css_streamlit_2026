@@ -283,7 +283,7 @@ elif menu == "Contact":
         """
         <div class="cv-card">
             <p>
-                <strong>Email:</strong> your.email@ufs.ac.za<br>
+                <strong>Email:</strong> valusha.oel@gmail.com<br>
                 <strong>Institution:</strong> University of the Free State<br>
             </p>
             <a class="linkedin-button" href="https://www.linkedin.com/in/valentinaoelofse/" target="_blank">
