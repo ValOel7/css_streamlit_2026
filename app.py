@@ -70,7 +70,6 @@ menu = st.sidebar.radio(
         "Experience",
         "Research and Methods",
         "Qualifications",
-        "Skills and Tools",
         "Contact"
     ]
 )
@@ -317,48 +316,6 @@ elif menu == "Qualifications":
         unsafe_allow_html=True
     )
 
-# =================================================
-# Skills and Tools
-# =================================================
-elif menu == "Skills and Tools":
-    st.title("Skills and Tools")
-
-    col1, col2 = st.columns(2)
-
-    with col1:
-        st.markdown(
-            """
-            <div class="cv-card">
-            <h3 class="section-title">Technical Skills</h3>
-
-            <ul>
-                <li>Statistical analysis</li>
-                <li>Data science methodologies</li>
-                <li>Machine learning</li>
-                <li>Academic writing and peer review</li>
-            </ul>
-            </div>
-            """,
-            unsafe_allow_html=True
-        )
-
-    with col2:
-        st.markdown(
-            """
-            <div class="cv-card">
-            <h3 class="section-title">Tools and Technologies</h3>
-
-            <ul>
-                <li>Python (pandas, numpy, scikit-learn)</li>
-                <li>R (tidyverse)</li>
-                <li>SQL</li>
-                <li>LaTeX</li>
-                <li>Git and reproducible workflows</li>
-            </ul>
-            </div>
-            """,
-            unsafe_allow_html=True
-        )
 
 # =================================================
 # Contact
@@ -370,9 +327,8 @@ elif menu == "Contact":
         """
         <div class="cv-card">
         <p>
-        <strong>Email:</strong> jane.doe@example.com<br>
-        <strong>Institution:</strong> University of Science<br>
-        <strong>Office Hours:</strong> By appointment
+        <strong>Email:</strong> valusha.oel@gmail.com<br>
+        <strong>Institution:</strong> University of the Free State<br>
         </p>
         </div>
         """,
