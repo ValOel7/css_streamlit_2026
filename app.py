@@ -237,16 +237,7 @@ elif menu == "Contact":
         <p>
         <strong>Email:</strong> your.email@ufs.ac.za<br>
         <strong>Institution:</strong> University of the Free State<br>
-        <strong>Office Hours:</strong> By appointment
+        <strong>LinkedIn Link:</strong> https://www.linkedin.com/in/valentinaoelofse/
         </p>
-
-        <a class="linkedin-button" 
-           href="https://www.linkedin.com/in/your-linkedin-username" 
-           target="_blank">
-           View LinkedIn Profile
-        </a>
-        </div>
-        """,
-        unsafe_allow_html=True
     )
 
