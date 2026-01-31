@@ -5,59 +5,33 @@ import streamlit as st
 # -------------------------------------------------
 st.set_page_config(
     page_title="Academic CV Portfolio",
-    layout="wide"
+    layout="wide",
 )
 
 # -------------------------------------------------
-# Custom CSS (Professional Purple Theme)
+# Helpers
 # -------------------------------------------------
-st.markdown(
-    """
-    <style>
-    body {
-        background-color: #f7f5fb;
-    }
-    .main {
-        background-color: #f7f5fb;
-    }
-    h1, h2, h3 {
-        color: #4b2e83;
-    }
-    .stSidebar {
-        background-color: #ede9f5;
-    }
-    .cv-card {
-        background-color: white;
-        padding: 1.2rem;
-        border-radius: 6px;
-        border-left: 5px solid #4b2e83;
-        margin-bottom: 1rem;
-    }
-    .section-title {
-        border-bottom: 1px solid #d6cfee;
-        padding-bottom: 0.3rem;
-        margin-bottom: 0.8rem;
-    }
-    .small-text {
-        font-size: 0.9rem;
-        color: #555555;
-    }
-    .linkedin-button {
-        background-color: #4b2e83;
-        color: white !important;
-        padding: 0.45rem 0.9rem;
-        text-decoration: none;
-        border-radius: 4px;
-        font-weight: 500;
-    }
-    .linkedin-button:hover {
-        background-color: #3b2366;
-        color: white !important;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+def section_header(title: str, subtitle: str | None = None) -> None:
+    st.title(title)
+    if subtitle:
+        st.caption(subtitle)
+    st.divider()
+
+def experience_item(role: str, org_line: str, dates_location: str, bullets: list[str]) -> None:
+    with st.container(border=True):
+        st.subheader(role)
+        st.caption(org_line)
+        st.caption(dates_location)
+        st.markdown("**Key responsibilities / achievements:**")
+        for b in bullets:
+            st.write(f"• {b}")
+
+def qualification_item(qualification: str, field: str, institution: str, dates: str) -> None:
+    with st.container(border=True):
+        st.subheader(qualification)
+        st.caption(field)
+        st.caption(institution)
+        st.caption(dates)
 
 # -------------------------------------------------
 # Sidebar Profile Navigation
@@ -65,231 +39,155 @@ st.markdown(
 st.sidebar.title("Profile Navigation")
 menu = st.sidebar.radio(
     "Select section",
-    [
-        "Academic Profile",
-        "Experience",
-        "Qualifications",
-        "Contact"
-    ]
+    ["Academic Profile", "Experience", "Qualifications", "Contact"],
 )
 
-st.sidebar.markdown("---")
+st.sidebar.divider()
 st.sidebar.caption("Academic CV portfolio")
 
 # =================================================
 # Academic Profile
 # =================================================
 if menu == "Academic Profile":
-    st.title("Academic Profile")
+    section_header("Academic Profile")
 
-    col1, col2 = st.columns([1, 3])
+    col1, col2 = st.columns([1, 3], gap="large")
 
     with col1:
         st.image(
             "https://media.licdn.com/dms/image/v2/D4D03AQEep1ngJFGRvw/profile-displayphoto-scale_400_400/B4DZvu5VAOGUAg-/0/1769239565802?e=1771459200&v=beta&t=LseAPd591Le3-pb-BhzUUnn5oUvsFkWG_LQZ-UuFXD8",
-            width=170
+            width=170,
         )
 
     with col2:
-        st.markdown(
-            """
-            <div class="cv-card">
-                <h3>Valusha Oelofse</h3>
-                <p class="small-text">
-                Junior Lecturer and Aspiring Data Scientist<br>
-                Department of Economics and Finance<br>
-                University of the Free State
-                </p>
-            </div>
-            """,
-            unsafe_allow_html=True
-        )
+        with st.container(border=True):
+            st.subheader("Junior Lecturer and Aspiring Data Scientist")
+            st.caption("Department")
+            st.caption("University")
 
-        st.markdown(
-            """
-            **Profile Summary**
-            My passion lies in leveraging data to solve complex financial and 
-            business challenges. My experiences encompass data analytics, 
-            dashboard creation, data preprocessing, and developing machine learning models. 
-            My research focuses on designing a Social Stress 
-            Indicator which has sharpened my analytical and problem-solving expertise.
-            """
+        st.markdown("### Profile Summary")
+        st.write(
+            "My passion lies in leveraging data to solve complex financial and "
+            "business challenges. My experiences encompass data analytics, "
+            "dashboard creation, data preprocessing, and developing machine learning models. "
+            "My research focuses on designing a Social Stress Indicator which has sharpened "
+            "my analytical and problem-solving expertise."
         )
 
 # =================================================
 # Experience
 # =================================================
 elif menu == "Experience":
-    st.title("Experience")
+    section_header("Experience")
 
-    st.markdown(
-        """
-        <div class="cv-card">
-        <h3 class="section-title">Junior Lecturer</h3>
-        <p class="small-text">
-        University of the Free State · Contract<br>
-        February 2025 – Present<br>
-        Bloemfontein, Free State, South Africa (On-site)
-        </p>
-
-        <ul>
-            <li>Lecturing and supporting undergraduate modules in quantitative and data-oriented subjects</li>
-            <li>Designing and delivering tutorials and practical sessions</li>
-            <li>Assessment, marking, and academic moderation</li>
-            <li>Supporting student development in data analysis and problem-solving skills</li>
-        </ul>
-        </div>
-        """,
-        unsafe_allow_html=True
+    experience_item(
+        role="Junior Lecturer",
+        org_line="University of the Free State · Contract",
+        dates_location="February 2025 – Present · Bloemfontein, Free State, South Africa (On-site)",
+        bullets=[
+            "Lecturing and supporting undergraduate modules in quantitative and data-oriented subjects",
+            "Designing and delivering tutorials and practical sessions",
+            "Assessment, marking, and academic moderation",
+            "Supporting student development in data analysis and problem-solving skills",
+        ],
     )
 
-    st.markdown(
-        """
-        <div class="cv-card">
-        <h3 class="section-title">Data Analyst</h3>
-        <p class="small-text">
-        Interdisciplinary Centre for Digital Futures (ICDF), University of the Free State · Contract<br>
-        July 2023 – December 2024<br>
-        Bloemfontein, Free State, South Africa (On-site)
-        </p>
-
-        <ul>
-            <li>Conducted data analysis in support of interdisciplinary research initiatives</li>
-            <li>Performed data cleaning, exploratory analysis, and modelling</li>
-            <li>Produced analytical outputs and visualisations for research and reporting purposes</li>
-            <li>Collaborated with academic and research stakeholders across disciplines</li>
-        </ul>
-        </div>
-        """,
-        unsafe_allow_html=True
+    experience_item(
+        role="Data Analyst",
+        org_line="Interdisciplinary Centre for Digital Futures (ICDF), University of the Free State · Contract",
+        dates_location="July 2023 – December 2024 · Bloemfontein, Free State, South Africa (On-site)",
+        bullets=[
+            "Conducted data analysis in support of interdisciplinary research initiatives",
+            "Performed data cleaning, exploratory analysis, and modelling",
+            "Produced analytical outputs and visualisations for research and reporting purposes",
+            "Collaborated with academic and research stakeholders across disciplines",
+        ],
     )
 
-    st.markdown(
-        """
-        <div class="cv-card">
-        <h3 class="section-title">Intern</h3>
-        <p class="small-text">
-        Quantify Your Future · Virtual Internship (Powered by SAGEA)<br>
-        January 2023 – February 2023<br>
-        Remote
-        </p>
-
-        <ul>
-            <li>Participated in industry-aligned data analytics projects with FirstRand, Absa, and Nedbank</li>
-            <li>Gained practical exposure to data framing, exploration, modelling, and visualisation</li>
-            <li>Developed core professional skills including critical thinking, collaboration, and communication</li>
-            <li>Completed team-based projects facilitated by financial industry partners</li>
-        </ul>
-        </div>
-        """,
-        unsafe_allow_html=True
+    experience_item(
+        role="Intern",
+        org_line="Quantify Your Future · Virtual Internship (Powered by SAGEA)",
+        dates_location="January 2023 – February 2023 · Remote",
+        bullets=[
+            "Participated in industry-aligned data analytics projects with FirstRand, Absa, and Nedbank",
+            "Gained practical exposure to data framing, exploration, modelling, and visualisation",
+            "Developed core professional skills including critical thinking, collaboration, and communication",
+            "Completed team-based projects facilitated by financial industry partners",
+        ],
     )
 
-    st.markdown(
-        """
-        <div class="cv-card">
-        <h3 class="section-title">Demonstrator</h3>
-        <p class="small-text">
-        University of the Free State · Contract<br>
-        September 2022 – November 2022<br>
-        Bloemfontein, South Africa
-        </p>
-
-        <ul>
-            <li>Assisted students during practical sessions for module CSIS1644</li>
-            <li>Provided academic support and clarification of module content</li>
-            <li>Invigilated tests and supported assessment processes</li>
-        </ul>
-        </div>
-        """,
-        unsafe_allow_html=True
+    experience_item(
+        role="Demonstrator",
+        org_line="University of the Free State · Contract",
+        dates_location="September 2022 – November 2022 · Bloemfontein, South Africa",
+        bullets=[
+            "Assisted students during practical sessions for module CSIS1644",
+            "Provided academic support and clarification of module content",
+            "Invigilated tests and supported assessment processes",
+        ],
     )
 
-    st.markdown(
-        """
-        <div class="cv-card">
-        <h3 class="section-title">Demonstrator</h3>
-        <p class="small-text">
-        University of the Free State · Contract<br>
-        February 2022 – July 2022<br>
-        Bloemfontein, Free State, South Africa
-        </p>
-
-        <ul>
-            <li>Supported practical sessions for module CSIS1614</li>
-            <li>Answered student queries related to course content and assessments</li>
-            <li>Assisted with invigilation and administrative academic duties</li>
-        </ul>
-        </div>
-        """,
-        unsafe_allow_html=True
+    experience_item(
+        role="Demonstrator",
+        org_line="University of the Free State · Contract",
+        dates_location="February 2022 – July 2022 · Bloemfontein, Free State, South Africa",
+        bullets=[
+            "Supported practical sessions for module CSIS1614",
+            "Answered student queries related to course content and assessments",
+            "Assisted with invigilation and administrative academic duties",
+        ],
     )
 
 # =================================================
 # Qualifications
 # =================================================
 elif menu == "Qualifications":
-    st.title("Qualifications")
+    section_header("Qualifications")
 
-    st.markdown(
-        """
-        <div class="cv-card">
-        <h3 class="section-title">Master of Commerce (MCom)</h3>
-        <p class="small-text">
-        Business and Financial Analytics<br>
-        University of the Free State<br>
-        January 2025 – December 2025
-        </p>
-        </div>
-        """,
-        unsafe_allow_html=True
+    qualification_item(
+        qualification="Master of Commerce (MCom)",
+        field="Business and Financial Analytics",
+        institution="University of the Free State",
+        dates="January 2025 – December 2025",
     )
 
-    st.markdown(
-        """
-        <div class="cv-card">
-        <h3 class="section-title">Bachelor of Commerce Honours (BCom Hons)</h3>
-        <p class="small-text">
-        Business and Financial Analytics<br>
-        University of the Free State<br>
-        January 2024 – December 2024
-        </p>
-        </div>
-        """,
-        unsafe_allow_html=True
+    qualification_item(
+        qualification="Bachelor of Commerce Honours (BCom Hons)",
+        field="Business and Financial Analytics",
+        institution="University of the Free State",
+        dates="January 2024 – December 2024",
     )
 
-    st.markdown(
-        """
-        <div class="cv-card">
-        <h3 class="section-title">Bachelor of Commerce (BCom)</h3>
-        <p class="small-text">
-        Business and Financial Analytics<br>
-        University of the Free State<br>
-        2021 – 2023
-        </p>
-        </div>
-        """,
-        unsafe_allow_html=True
+    qualification_item(
+        qualification="Bachelor of Commerce (BCom)",
+        field="Business and Financial Analytics",
+        institution="University of the Free State",
+        dates="2021 – 2023",
     )
 
 # =================================================
 # Contact
 # =================================================
 elif menu == "Contact":
-    st.title("Contact")
+    section_header("Contact")
 
-    st.markdown(
-        """
-        <div class="cv-card">
-            <p>
-                <strong>Email:</strong> valusha.oel@gmail.com<br>
-                <strong>Institution:</strong> University of the Free State<br>
-            </p>
-            <a class="linkedin-button" href="https://www.linkedin.com/in/valentinaoelofse/" target="_blank">
-                View LinkedIn Profile
-            </a>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+    with st.container(border=True):
+        st.subheader("Get in touch")
+
+        col1, col2 = st.columns(2, gap="large")
+        with col1:
+            st.markdown("**Email:**")
+            st.write("")  # add email here
+
+        with col2:
+            st.markdown("**Institution:**")
+            st.write("University")  # update as needed
+
+        st.divider()
+
+        # Streamlit-native link button (works on newer Streamlit versions)
+        try:
+            st.link_button("View LinkedIn Profile", "https://www.linkedin.com/in/")
+        except Exception:
+            # Fallback for older versions
+            st.markdown("[View LinkedIn Profile](https://www.linkedin.com/in/)")
