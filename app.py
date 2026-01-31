@@ -49,7 +49,7 @@ st.sidebar.caption("Academic CV portfolio")
 # Academic Profile
 # =================================================
 if menu == "Academic Profile":
-    section_header("Academic Profile")
+    section_header("Valusha Oelofse Academic Profile")
 
     col1, col2 = st.columns([1, 3], gap="large")
 
@@ -62,8 +62,8 @@ if menu == "Academic Profile":
     with col2:
         with st.container(border=True):
             st.subheader("Junior Lecturer and Aspiring Data Scientist")
-            st.caption("Department")
-            st.caption("University")
+            st.caption("Department of Economics and Finance")
+            st.caption("University of the Free State")
 
         st.markdown("### Profile Summary")
         st.write(
@@ -177,17 +177,17 @@ elif menu == "Contact":
         col1, col2 = st.columns(2, gap="large")
         with col1:
             st.markdown("**Email:**")
-            st.write("")  # add email here
+            st.write("valusha.oel@gmail.com")  # add email here
 
         with col2:
             st.markdown("**Institution:**")
-            st.write("University")  # update as needed
+            st.write("University of the Free State")  # update as needed
 
         st.divider()
 
         # Streamlit-native link button (works on newer Streamlit versions)
         try:
-            st.link_button("View LinkedIn Profile", "https://www.linkedin.com/in/")
+            st.link_button("View LinkedIn Profile", "https://www.linkedin.com/in/valentinaoelofse/")
         except Exception:
             # Fallback for older versions
-            st.markdown("[View LinkedIn Profile](https://www.linkedin.com/in/)")
+            st.markdown("[View LinkedIn Profile](https://www.linkedin.com/in/valentinaoelofse/)")
